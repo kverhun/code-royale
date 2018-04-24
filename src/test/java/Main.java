@@ -4,6 +4,7 @@ import com.codingame.gameengine.runner.GameRunner;
 public class Main {
     public static void main(String[] args) {
 
+        System.setProperty("league.level", "5");
         GameRunner gameRunner = new GameRunner();
 
         if (args.length < 2)
@@ -23,6 +24,7 @@ public class Main {
         //gameRunner.addAgent(CommandLinePlayerAgent(args[0]));
         gameRunner.addAgent(args[0]);
         gameRunner.addAgent(args[1]);
+
         //gameRunner.addAgent(Level1Player.class);
 
         gameRunner.start();
